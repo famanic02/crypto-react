@@ -1,0 +1,108 @@
+:root {
+  --line-padding: 10px;
+}
+.Step {
+  width: 100%;
+  padding-top: 20px;
+
+  &__Wrapper {
+    margin: auto;
+    max-width: 500px;
+    position: relative;
+  }
+  &__Line {
+    height: 2px;
+    background-color: #1b2a49;
+    position: absolute;
+    top: var(--line-padding);
+    // TODO: update CSS
+    left: 10px;
+    // right: 30px;
+    width: unset !important;
+  }
+
+  &__List {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+    margin: 0 auto;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      height: 2px;
+      background: #f1f1f1;
+      width: auto;
+      display: block;
+      right: 20px;
+    }
+  }
+
+  &__Item {
+    // width: 16px;
+    // height: 16px;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .point {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: #f1f1f1;
+
+      &--active {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        border: solid 2px #1b2a49;
+      }
+
+      &--completed {
+        background-color: #1b2a49;
+      }
+
+      &--default {}
+    }
+
+    &-default {
+      // background-color: #f1f1f1;
+    }
+
+    &-active {
+      // width: 24px;
+      // height: 24px;
+      // margin-top: -5px;
+
+      position: relative;
+
+      &--text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        text-align: center;
+        color: #1b2a49;
+        padding-top: 8px;
+        // margin-top: 30px;
+        // position: relative;
+        // transform: translate(-50%, 0);
+      }
+    }
+
+    &-completed {
+      // background-color: #1b2a49;
+    }
+  }
+
+}

@@ -1,0 +1,23 @@
+.App-Layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.Layout-Header {
+  background-color: var(--white);
+  &--fixed {
+
+  }
+  &--active {
+
+  }
+}
+
+.App-Logo {
+  min-height: 64px;
+  // width: auto;
+}
+
+.Layout-Sider {
+  background-color: var(--white);
+}

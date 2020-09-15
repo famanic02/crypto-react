@@ -1,0 +1,12 @@
+@import 'Styles/mixins';
+
+.Pending {
+  .Info {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    div:first-child {
+      font-weight: bold;
+    }
+  }
+}
