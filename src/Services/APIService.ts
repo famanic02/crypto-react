@@ -142,8 +142,8 @@ export class APIService {
     return fetch(`${this._baseUrl}${url}`, {
       headers: this._headers,
       method: 'GET',
-      credentials: 'include',
-      mode: 'no-cors',
+      // credentials: 'omit',
+      // mode: 'no-cors',
     })
       .then((res: any) => this.handleResponse(res))
       .then((data: any) => {
@@ -156,7 +156,7 @@ export class APIService {
     return fetch(`${this._baseUrl}/${url}`, {
       headers: this._headers,
       method: 'POST',
-      credentials: 'include',
+      credentials: 'omit',
       body: JSON.stringify(requestData),
     })
       .then((res: any) => this.handleResponse(res))
@@ -170,7 +170,7 @@ export class APIService {
     return fetch(`${this._baseUrl}/${url}`, {
       headers: this._headers,
       method: 'POST',
-      credentials: 'include',
+      credentials: 'omit',
       body: requestForm,
     })
       .then((res: Response) => res.json())
@@ -184,7 +184,7 @@ export class APIService {
     return fetch(`${this._baseUrl}/${url}`, {
       headers: this._headers,
       method: 'PUT',
-      credentials: 'include',
+      credentials: 'omit',
       body: JSON.stringify(requestData),
     })
       .then((res: Response) => res.json())
